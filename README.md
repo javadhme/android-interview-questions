@@ -73,7 +73,7 @@ After so many interview with many android developer, I decided to document my qu
 - Multiple inheritances? Possible? How can we do that?
 - Object scopes?
 - Override private methods, possible?
-- What is a static variable in java?
+- What is a static variable in Java?
 - Java reference types?
 - What is Generic in Java?
 - How String class is implemented? Is it mutable or immutable? Why was it made immutable?
@@ -89,3 +89,37 @@ After so many interview with many android developer, I decided to document my qu
 - What is the `volatile` modifier?
 - What is the `hashCode()` used for?
 - What are "annotations"?
+
+<br>
+
+### 3. Kotlin
+
+- What are the benefits of Kotlin?
+
+- What does "Null safety" meaning?
+- Why Kotlin does not support primitive type?
+- What is Lazy initialization?
+- What is the data class?
+- Is it possible to inherit a class/method/property by default?
+- Difference between apply, also?
+- What `==` exactly do in Kotlin in comparison to Java?
+- What is the difference between parameter and argument?
+- What is the difference between function and method?
+- What is the "receiver" in the extension function?
+- What is operator overloading?
+- Is it possible to write a static method as java as has?
+- What is a sealed class?
+- How does an extension function work?
+- What is `reified` keyword?
+- What is an inline function?
+- What are the cons of using an inline function?
+- What is the best practice of using an inline function?
+- How does the `companion object` block work?
+- Is it possible to create an extension function on the `companion object` of a class?
+- Extension function as a member, possible? What are the benefits of declaring an extension function as a member?
+- What is a spread operator? What is the recommended place to use it?
+- What is the producer’s function? how to demonstrate it in Kotlin?
+- What is the consumer’s function? how to demonstrate it in Kotlin?
+- What is the higher-order function?
+- How to compare two Strings in Kotlin?
+- What is the difference between `==` and `===` ?
