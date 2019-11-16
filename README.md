@@ -59,3 +59,33 @@ After so many interview with many android developer, I decided to document my qu
 | Method overloading may or may not require inheritance. | While method overriding always needs inheritance. |
 | In this, methods must have same name and different signature. | While in this, methods must have same name and same signature. |
 | In method overloading, return type can or can not be be same, but we must have to change the parameter. | While in this, return type must be same or co-variant. |
+
+<br>
+
+### 2. JAVA
+
+- How to prevent a class to be extended?
+
+- What is the use of the finalize method?
+- Overriding for static method, possible?
+- What is an abstract class? Benefits?
+- What is an object cloning? Is it enable for all objects?
+- Multiple inheritances? Possible? How can we do that?
+- Object scopes?
+- Override private methods, possible?
+- What is a static variable in java?
+- Java reference types?
+- What is Generic in Java?
+- How String class is implemented? Is it mutable or immutable? Why was it made immutable?
+- What is the difference between int and Integer?
+- What are Autoboxing and unboxing?
+- What is the difference between initialization and instantiation?
+- How does a static block work?
+- What does the keyword `synchronized` mean?
+- What is the memory leak? How to handle it?
+- What is `transient` modifier?
+- What is the difference between `==` and `.equal`?
+- What is `reflection`?
+- What is the `volatile` modifier?
+- What is the `hashCode()` used for?
+- What are "annotations"?
