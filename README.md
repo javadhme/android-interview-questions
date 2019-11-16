@@ -1,6 +1,5 @@
 ## Android Interview Questions
 
-After so many interview with many android developer, I decided to document my questions which ask in the interview meeting.
 
 <br>
 
