@@ -318,6 +318,31 @@
 
 <br>
 
+
+
+### 7. Gradle
+
+- What is buildType?
+
+- What do you do if you want to publish different versions of an APK with the same codabase?
+
+    *using product flavor.* [What is flavor?]("https://android.jlelse.eu/product-flavors-for-android-library-d3b2d240fca2")
+
+- How to add a dependency only on a certain build of the app?
+
+  Flavor dependency. What? don't worry, [read this link]("https://developer.android.com/studio/build/dependencies#dependency-configurations")
+
+- What is the difference between `implementation` and `api`?
+
+  These two keywords work the same when you want to add a new library but the main difference occurs when using it in the internal library. Let's explain it with an example. Consider your app has a library called 'libraryA'. This library is also dependant on another library called 'libraryB'. the dependency flow will be : `app -> libraryA -> libraryB` . If the libraryB is declared in libraryA with keyword `implementation`, so your app module does not know anything about the classes of libraryB. So you can't access and use any classes of libraryB. If you want to do that, you must declare libraryB in the libraryA Gradle file with keyword `api`. For more information read [this medium link]("https://medium.com/mindorks/implementation-vs-api-in-gradle-3-0-494c817a6fa").
+
+
+- What do you mean by Gradle wrapper?
+
+  The Gradle wrapper is the most suitable way to initiate a Gradle build. A Gradle wrapper is a Window’s batch script which has a shell script for the OS (operating system). Once you start the Gradle build via the wrapper, you will see an auto download which runs the build.
+
+<br>
+
 ### 8. Design patterns
 
 According to a report by [codespaghetti]("http://www.codespaghetti.com/java-design-pattern-interview-questions/"), The most design patterns that you must to know are **Singleton**, **Factory**, and **Builder**. I didn't bring the typical questions like what is a singleton, factory, and... . I imagine you fluent on these patterns and instead, I will focus on the other side of questions that may asked in the interview meeting.
@@ -354,6 +379,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
     }
 
     ```
+<br>
     - A thread-safe singleton pattern in java using Synchronization
     ```java
     public class Singleton{
@@ -370,7 +396,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
         }
     }
     ```
-
+<br>
     - Double-checked locking with volatile keyword
     ```java
     public class Singleton {
@@ -391,7 +417,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
 
     }    
     ```
-
+<br>
     - Initialization-on-demand with singleton holder
     ```java
     // Correct lazy initialization in Java
@@ -409,7 +435,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
         }
     }
     ```
-
+<br>
     - Using Enum
     ```java
     enum Color {
@@ -438,7 +464,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
         }
     }
     ```
-
+<br>
 - What are the drawbacks of using singleton design pattern?
 
   - **Testability issue:** The bad thing with singletons is that the
@@ -517,7 +543,7 @@ runtime?
 
 ### 9. Data structure and algoritms
 
-_NOTICE: For D.S. questions will not add any response!_ :(
+_NOTICE: For D.S. questions, the responses will not be added_ :(
 
 - What are the differences between Array and linkedList?
 - What are the differences between Array and ArrayList?
