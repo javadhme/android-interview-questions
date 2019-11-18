@@ -318,6 +318,31 @@
 
 <br>
 
+### 5. Architecture And Coding
+
+- What is MVVM stands for?
+
+- What are the differences between MVP and MVVM?
+- Explain SOLID programming principle?
+- What is Dependency Inversion?
+- What is Dependency Injection?
+- What is repository pattern?
+- What is android clean architecture?
+
+
+<br>
+
+### 6. Tools and libraries
+
+- What is android DataBinding?
+
+- Explain `scope` concept in dagger2
+- What is marble diagram?
+- Explain different types of Observables
+- How to implement instant search with RxJava?
+
+
+<br>
 
 ### 7. Gradle
 
@@ -378,7 +403,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
     }
 
     ```
-<br>
+
     - A thread-safe singleton pattern in java using Synchronization
 
     ```java
@@ -396,7 +421,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
         }
     }
     ```
-<br>
+
     - Double-checked locking with volatile keyword
 
     ```java
@@ -418,7 +443,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
 
     }    
     ```
-<br>
+
     - Initialization-on-demand with singleton holder
 
     ```java
@@ -437,7 +462,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
         }
     }
     ```
-<br>
+
     - Using Enum
 
     ```java
