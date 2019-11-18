@@ -40,16 +40,17 @@
 
 ### 1. Object-Oriented
 
-- What is and Object?
-- What is the main feature of OOP ? <br>
+- **What is and Object?**
+- **What is the main feature of OOP ?**
+
     `Encapsulation`, `Polymorphism`, `Inheritance`, `Abstraction`
 
-- What is encapsulation?
-- What is Polymorphism?
-- Difference between abstract and interface?
-- What is the difference between static and dynamic Polymorphism?
-- Can Interfaces to be extended?
-- What is the difference between overriding and overloading?
+- **What is encapsulation?**
+- **What is Polymorphism?**
+- **Difference between abstract and interface?**
+- **What is the difference between static and dynamic Polymorphism?**
+- **Can Interfaces to be extended?**
+- **What is the difference between overriding and overloading?**
 
 | Method Overloading      | Method Overriding     |
 | :-------------   | :------------- |
@@ -62,7 +63,7 @@
 
 <br>
 
-- What is the difference between Abstraction and Encapsulation?
+- **What is the difference between Abstraction and Encapsulation?**
 
   Even though both Abstraction and Encapsulation looks similar because both hide complexity and make the external interface simpler there is a subtle difference between them. Abstraction hides logical complexity while Encapsulation hides Physical Complexity.
 
@@ -77,37 +78,37 @@
 
 ### 2. JAVA
 
-- How to prevent a class to be extended?
+- **How to prevent a class to be extended?**
 
-- What is the use of the finalize method?
-- Overriding for static method, possible?
-- What is an abstract class? Benefits?
-- What is an object cloning? Is it enable for all objects?
-- Multiple inheritances? Possible? How can we do that?
-- Object scopes?
-- Override private methods, possible?
-- why access to the non-static variable is not allowed from static method in Java?
+- **What is the use of the finalize method?**
+- **Overriding for static method, possible?**
+- **What is an abstract class? Benefits?**
+- **What is an object cloning? Is it enable for all objects?**
+- **Multiple inheritances? Possible? How can we do that?**
+- **Object scopes?**
+- **Override private methods, possible?**
+- **why access to the non-static variable is not allowed from static method in Java?**
 
   because non-static variable are associated with a specific instance of an object while static is not associated with any instance.
 
-- What is a static variable in Java?
-- Java reference types?
-- What is Generic in Java?
-- How String class is implemented? Is it mutable or immutable? Why was it made immutable?
-- What is the difference between int and Integer?
-- What are Autoboxing and unboxing?
-- What is the difference between initialization and instantiation?
-- How does a static block work?
-- What does the keyword `synchronized` mean?
-- What is the memory leak? How to handle it?
-- What is `transient` modifier?
-- What is the difference between `==` and `.equal`?
-- What is `reflection`?
-- What is the `volatile` modifier?
-- What is the `hashCode()` used for?
-- What are "annotations"?
-- When we use thread-safe , what does it mean?
-- what is the difference between `throw` and `throws`?
+- **What is a static variable in Java?**
+- **Java reference types?**
+- **What is Generic in Java?**
+- **How String class is implemented? Is it mutable or immutable? Why was it made immutable?**
+- **What is the difference between int and Integer?**
+- **What are Autoboxing and unboxing?**
+- **What is the difference between initialization and instantiation?**
+- **How does a static block work?**
+- **What does the keyword `synchronized` mean?**
+- **What is the memory leak? How to handle it?**
+- **What is `transient` modifier?**
+- **What is the difference between `==` and `.equal`?**
+- **What is `reflection`?**
+- **What is the `volatile` modifier?**
+- **What is the `hashCode()` used for?**
+- **What are "annotations"?**
+- **When we use thread-safe , what does it mean?**
+- **what is the difference between `throw` and `throws`?**
 
   Keyword `throw` is used to explicitly throw as an exception in the body of function, while `throws` is utilized to handle checked exceptions for re-intimating the compiler that exceptions are being handled. The throws need to be used in the function’s signature and also while invoking the method that raises checked exceptions.
 
@@ -115,50 +116,50 @@
 
 ### 3. Kotlin
 
-- What are the benefits of Kotlin?
+- **What are the benefits of Kotlin?**
 
-- What does "Null safety" meaning?
-- Why Kotlin does not support primitive type?
-- What is Lazy initialization?
-- What is the data class?
-- Is it possible to inherit a class/method/property by default?
-- Difference between apply, also?
-- What `==` exactly do in Kotlin in comparison to Java?
-- What is the difference between parameter and argument?
-- What is the difference between function and method?
-- What is the "receiver" in the extension function?
-- What is operator overloading?
-- Is it possible to write a static method as java as has?
-- What is a sealed class?
-- How does an extension function work?
-- What is `reified` keyword?
-- What is an inline function?
-- What are the cons of using an inline function?
-- What is the best practice of using an inline function?
-- How does the `companion object` block work?
-- Is it possible to create an extension function on the `companion object` of a class?
-- Extension function as a member, possible? What are the benefits of declaring an extension function as a member?
-- What is a spread operator? What is the recommended place to use it?
-- What is the producer’s function? how to demonstrate it in Kotlin?
-- What is the consumer’s function? how to demonstrate it in Kotlin?
-- What is the higher-order function?
-- How to compare two Strings in Kotlin?
-- What is the difference between `==` and `===` ?
+- **What does "Null safety" meaning?**
+- **Why Kotlin does not support primitive type?**
+- **What is Lazy initialization?**
+- **What is the data class?**
+- **Is it possible to inherit a class/method/property by default?**
+- **Difference between apply, also?**
+- **What `==` exactly do in Kotlin in comparison to Java?**
+- **What is the difference between parameter and argument?**
+- **What is the difference between function and method?**
+- **What is the "receiver" in the extension function?**
+- **What is operator overloading?**
+- **Is it possible to write a static method as java as has?**
+- **What is a sealed class?**
+- **How does an extension function work?**
+- **What is `reified` keyword?**
+- **What is an inline function?**
+- **What are the cons of using an inline function?**
+- **What is the best practice of using an inline function?**
+- **How does the `companion object` block work?**
+- **Is it possible to create an extension function on the `companion object` of a class?**
+- **Extension function as a member, possible? What are the benefits of declaring an extension function as a member?**
+- **What is a spread operator? What is the recommended place to use it?**
+- **What is the producer’s function? how to demonstrate it in Kotlin?**
+- **What is the consumer’s function? how to demonstrate it in Kotlin?**
+- **What is the higher-order function?**
+- **How to compare two Strings in Kotlin?**
+- **What is the difference between `==` and `===` ?**
 
 <br>
 
 ### 4. Android
 
-- What is `Application` class?
+- **What is `Application` class?**
 
-- Difference between `Activity` and `Service`?
-- Why do android apps need to ask permission like `INTERNET` or `LOCATION`?
-- Differences between `serializable` and `Parcalable`?
-- Why `serializable` body is empty? How is it doing?
-- Which method in `fragment` runs only once?
-- How does the activity respond when orientation is changed?
-- How to know `configChange` happens in `onDestroy()` function?
-- How to prevent the data from reloading when orientation is changed? <br>
+- **Difference between `Activity` and `Service`?**
+- **Why do android apps need to ask permission like `INTERNET` or `LOCATION`?**
+- **Differences between `serializable` and `Parcalable`?**
+- **Why `serializable` body is empty? How is it doing?**
+- **Which method in `fragment` runs only once?**
+- **How does the activity respond when orientation is changed?**
+- **How to know `configChange` happens in `onDestroy()` function?**
+- **How to prevent the data from reloading when orientation is changed?**
 
   The most basic approach would be to use a combination of `ViewModels` and `onSaveInstanceState()`. A `ViewModel` is LifeCycle-Aware. In other words,
   a `ViewModel` will not be destroyed if its owner is destroyed for a
@@ -169,16 +170,17 @@
   `ViewModel` class (since it persists data during configuration changes) and
   use `OnSaveInstanceState()` to store small amounts of UI data.
 
-- How to handle multiple screen sizes?
-- What is the difference between margin and padding? <br>
+- **How to handle multiple screen sizes?**
+- **What is the difference between margin and padding?**
+
    - **Padding** will be space added inside the container, for instance,
     if it is a button, padding will be added inside the button.       
 
   - **Margin** will be space added outside the container.
 
-- What is `sw` keyword in `layout-sw600` folder meaning?
-- What is the difference between `sw` and `w` and `h` as postfix in order to define the resources folder?
-- What are the major differences between `ListView` and `RecyclerView`?
+- **What is `sw` keyword in `layout-sw600` folder meaning?**
+- **What is the difference between `sw` and `w` and `h` as postfix in order to define the resources folder?**
+- **What are the major differences between `ListView` and `RecyclerView`?**
   - **ViewHolder Pattern**: `Recyclerview` implements the ViewHolders pattern
     whereas it is not mandatory in a ListView. A `ViewHolder` object stores
     each of the component views inside the tag field of the Layout, so you can
@@ -197,7 +199,7 @@
   - **Item Animator**: `ListViews` are lacking in support of good animations,
     but the `RecyclerView` brings a whole new dimension to it.
 
-- Difference between `Intent` and `IntentService`?
+- **Difference between `Intent` and `IntentService`?**
   - `Service` is the base class for Android services that can be extended to
     create any service. A class that directly extends `Service` runs on the main
     thread so it will block the UI (if there is one) and should therefore either
@@ -210,10 +212,10 @@
    `Intent` in turn using a worker thread, and stops itself when it runs out of
    work. [Read More on Mindorks's blog]("https://blog.mindorks.com/service-vs-intentservice-in-android")
 
-- How to pass items to `fragment`?
-- What is `Fragment`?
-- How would you communicate between two `fragments`?
-- Difference between adding/replacing `fragment` in `backstack`?
+- **How to pass items to `fragment`?**
+- **What is `Fragment`?**
+- **How would you communicate between two `fragments`?**
+- **Difference between adding/replacing `fragment` in `backstack`?**
   - `replace` removes the existing `fragment` and adds a new `fragment`.
     This means when you press back button the fragment that got replaced will
     be created with its onCreateView being invoked.
@@ -227,11 +229,11 @@
     `onCreateView()` and other life cycle events will be invoked in case of
     `replace` but they wont be invoked in case of `add`.
 
-- What is the difference between `dialog` and `dialogFragment`?
+- **What is the difference between `dialog` and `dialogFragment`?**
 
-- What is the difference between `Thread` and `AsyncTask`?
+- **What is the difference between `Thread` and `AsyncTask`?**
 
-- What is the relationship between the life cycle of an `AsyncTask` and an `Activity`? What problems can this result in? How can these problems be avoided? <br>
+- **What is the relationship between the life cycle of an `AsyncTask` and an `Activity`? What problems can this result in? How can these problems be avoided?**
 
   An AsyncTask is not tied to the life cycle of the Activity that contains it.
   So, for example, if you start an AsyncTask inside an Activity and the user
@@ -254,15 +256,16 @@
   generally a bad idea . Rather, for long-running background tasks, a different
   mechanism (such as a service) should be employed.
 
-- What is `Lopper` and how it works?
-- What are Handlers? <br>
+- **What is `Lopper` and how it works?**
+- **What are Handlers?**
+
     Handlers are objects for managing threads. It receives messages and writes
     code on how to handle the message. They run outside of the activity’s
     lifecycle, so they need to be cleaned up properly or else you will have
     thread leaks. Handlers allow communicating between the background thread
     and the main thread.
 
-- What is the difference between `Foreground` and `Background` and `Bounded` service?
+- **What is the difference between `Foreground` and `Background` and `Bounded` service?**
   - __Foreground Service:__ A foreground `service` performs some operation that
   is noticeable to the user. For example, we can use a foreground service to
   play an audio track. A `Notification` must be displayed to the user.
@@ -278,9 +281,9 @@
   receive results. A bound service runs only as long as another application
   component is bound to it. [Read More](https://developer.android.com/guide/components/services)
 
-- What are the limitations of using `Services` in android 8 and higher?
-- What is `JobScheduling`?
-- What is `contentProvider` and what is typically used for?
+- **What are the limitations of using `Services` in android 8 and higher?**
+- **What is `JobScheduling`?**
+- **What is `contentProvider` and what is typically used for?**
 
   A `ContentProvider` provides data from one application to another, when
   requested. It manages access to a structured set of data. It provides mechanisms for defining data security. [Learn more]("https://medium.com/@sanjeevy133/an-idiots-guide-to-android-content-providers-part-1-970cba5d7b42" "An idiot guide to android content providers").
@@ -288,7 +291,7 @@
 
   ![Conent Provider diagram](/assets/images/content-provider-diagram.png)
 
-- What is the difference between `apply()` and `commit()` in `sharedPreferences`?
+- **What is the difference between `apply()` and `commit()` in `sharedPreferences`?**
   - `commit()` writes the data **synchronously** and returns a boolean value of
     success or failure depending on the result immediately.
 
@@ -296,10 +299,10 @@
     if there is an `apply()` outstanding and we perform another `commit()`,
     The `commit()` will be blocked until the `apply()` is not completed.
 
-- How you load your `Bitmaps`? What do you do for loading large bitmaps?
+- **How you load your `Bitmaps`? What do you do for loading large bitmaps?**
 [Loading Large Bitmaps Efficiently in Android](https://android.jlelse.eu/loading-large-bitmaps-efficiently-in-android-66826cd4ad53 "Loading Large Bitmaps Efficiently in Android")
 
-- How Android apps compiled and run?
+- **How Android apps compiled and run?**
   1. First step involves compiling the resources folder (/res) using the aapt
     (android asset packaging tool) tool. These are compiled to a single class
     file called R.java. This is a class that just contains constants.
@@ -311,57 +314,57 @@
   3. The final step involves the android apkbuilder which takes all the input
     and builds the apk (android packaging key) file.
 
-- Do you know any about how `Dalvik` is working?
-- What are the benefits of `ART` in comparison to `Dalvik`?
-- What is `AAPT` ?
-- What is Doze mode?
+- **Do you know any about how `Dalvik` is working?**
+- **What are the benefits of `ART` in comparison to `Dalvik`?**
+- **What is `AAPT` ?**
+- **What is Doze mode?**
 
 <br>
 
 ### 5. Architecture And Coding
 
-- What is MVVM stands for?
+- **What is MVVM stands for?**
 
-- What are the differences between MVP and MVVM?
-- Explain SOLID programming principle?
-- What is Dependency Inversion?
-- What is Dependency Injection?
-- What is repository pattern?
-- What is android clean architecture?
+- **What are the differences between MVP and MVVM?**
+- **Explain SOLID programming principle?**
+- **What is Dependency Inversion?**
+- **What is Dependency Injection?**
+- **What is repository pattern?**
+- **What is android clean architecture?**
 
 
 <br>
 
 ### 6. Tools and libraries
 
-- What is android DataBinding?
+- **What is android DataBinding?**
 
-- Explain `scope` concept in dagger2
-- What is marble diagram?
-- Explain different types of Observables
-- How to implement instant search with RxJava?
+- **Explain `scope` concept in dagger2**
+- **What is marble diagram?**
+- **Explain different types of Observables**
+- **How to implement instant search with RxJava?**
 
 
 <br>
 
 ### 7. Gradle
 
-- What is buildType?
+- **What is buildType?**
 
-- What do you do if you want to publish different versions of an APK with the same codabase?
+- **What do you do if you want to publish different versions of an APK with the same codabase?**
 
     *using product flavor.* [What is flavor?]("https://android.jlelse.eu/product-flavors-for-android-library-d3b2d240fca2")
 
-- How to add a dependency only on a certain build of the app?
+- **How to add a dependency only on a certain build of the app?**
 
   Flavor dependency. What? don't worry, [read this link]("https://developer.android.com/studio/build/dependencies#dependency-configurations")
 
-- What is the difference between `implementation` and `api`?
+- **What is the difference between `implementation` and `api`?**
 
   These two keywords work the same when you want to add a new library but the main difference occurs when using it in the internal library. Let's explain it with an example. Consider your app has a library called 'libraryA'. This library is also dependant on another library called 'libraryB'. the dependency flow will be : `app -> libraryA -> libraryB` . If the libraryB is declared in libraryA with keyword `implementation`, so your app module does not know anything about the classes of libraryB. So you can't access and use any classes of libraryB. If you want to do that, you must declare libraryB in the libraryA Gradle file with keyword `api`. For more information read [this medium link]("https://medium.com/mindorks/implementation-vs-api-in-gradle-3-0-494c817a6fa").
 
 
-- What do you mean by Gradle wrapper?
+- **What do you mean by Gradle wrapper?**
 
   The Gradle wrapper is the most suitable way to initiate a Gradle build. A Gradle wrapper is a Window’s batch script which has a shell script for the OS (operating system). Once you start the Gradle build via the wrapper, you will see an auto download which runs the build.
 
@@ -373,15 +376,15 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
 
 ![Top 5 java design pattern interview questions](/assets/images/design-patterns-report.png)
 
-- When to use Adapter pattern? (Not for RecyclerView or ListView)
+- **When to use Adapter pattern? (Not for RecyclerView or ListView)**
 
   Use Adapter pattern when you need to make two class work with incompatible interfaces. Adapter pattern can also be used to encapsulate third party code so that your application only depends upon Adapter, which can adapt itself when third party code changes or you moved to a different third party library.
 
-- In singleton pattern whether it is better to make the whole `getInstance()` method synchronized or just critical section is enough? Which one is preferable?
+- **In singleton pattern whether it is better to make the whole `getInstance()` method synchronized or just critical section is enough? Which one is preferable?**
 
   Synchronization of whole `getInstance()` method is costly and is only needed during the initialization on singleton instance, to stop creating another instance of Singleton.  Therefore it is better to only synchronize critical section and not the whole method.
 
-- How many ways can you write singleton class in Java?
+- **How many ways can you write singleton class in Java?**
 
   One can write singleton class in Java in five ways
 
@@ -493,7 +496,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
     }
     ```
 <br>
-- What are the drawbacks of using singleton design pattern?
+- **What are the drawbacks of using singleton design pattern?**
 
   - **Testability issue:** The bad thing with singletons is that the
   `getInstance()` method is globally accessible. That means that you usually
@@ -510,11 +513,11 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
   as cloning. If an application is running on multiple JVM’s, then, in this case,
   Singleton might be broken.
 
-- How can you prevent creating another instance of singleton using `clone()` method?
+- **How can you prevent creating another instance of singleton using `clone()` method?**
 
   The preferred way to prevent creating another instance of a singleton is by not implementing Cloneable interface and if you do just throw an exception from `clone()` method "_not to create a clone of singleton class_".
 
-- When will you prefer to use a Factory Pattern?
+- **When will you prefer to use a Factory Pattern?**
 
   The factory pattern is preferred in the following cases:
     - A class does not know which class of objects it must create
@@ -524,7 +527,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
     - you can use factory pattern where you have to create an object of any one of sub-classes depending on the given data
 
 
-- Why use a factory class to instantiate a class when we can use new operator?
+- **Why use a factory class to instantiate a class when we can use new operator?**
 
   Factory classes provide flexibility in terms of design. Below are some of the
   benefits of factory class:
@@ -535,7 +538,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
     - It gives you a lot more flexibility when it comes time to change the
       application as our creational logic is hidden from dependant code
 
-- What is the difference between factory and abstract factory design pattern?
+- **What is the difference between factory and abstract factory design pattern?**
 
   Both factory and abstract factory are creational design patterns. The major
   difference between these two is, a factory pattern creates an object through
@@ -543,7 +546,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
   factory pattern creates the object through composition and produce families
   of products. In other word an abstract factory is "factory of factories". You can find an example [___here___]("https://www.journaldev.com/1418/abstract-factory-design-pattern-in-java").
 
-- (My Favorite question!) Suppose we are building an application for a pizza
+- **(My Favorite question!) Suppose we are building an application for a pizza
 store and we need to model their pizza classes. Assume they offer four types
 of pizzas namely Peppy Paneer, Farmhouse, Margherita and Chicken Fiesta. Each
 pizza has a different cost. We have overridden the getCost() in the subclasses
@@ -554,14 +557,14 @@ Toppings may be redundant and it's OK. (It means a customer may choose double
 jalapeno or three-time barbeque). Each topping has its price and by adding
 each one the total cost of the pizza will be increased. If you have to suggest
 only one design pattern to solve this problem, choose which one? why? and
-How you implement it?  
+How you implement it?**
 
-- If you couldn't find a solution to the previous question, don't worry and
+- **If you couldn't find a solution to the previous question, don't worry and
 follow this one. It can help you to find out how to solve it. The question is,
 Which design pattern allows you to implement the inheritance approach at the
-runtime?
+runtime?**
 
-- which pattern is used when we need to decouple an abstraction from its implementation?
+- **which pattern is used when we need to decouple an abstraction from its implementation?**
 
   When we want to decouple an abstraction from its implementation in order that two can vary independently we use **bridge pattern**.
 
@@ -571,18 +574,18 @@ runtime?
 
 ### 9. Data structure and algoritms
 
-_NOTICE: For D.S. questions, the responses will not be added_ :(
+_NOTICE: For D.S. questions, the responses will not be added_ \^\_\^
 
-- What are the differences between Array and linkedList?
-- What are the differences between Array and ArrayList?
+- **What are the differences between Array and linkedList?**
+- **What are the differences between Array and ArrayList?**
 
-- Find duplicate an item in a non-sorted list?
-- How to implement a stack using queue?
+- **Find duplicate an item in a non-sorted list?**
+- **How to implement a stack using queue?**
 
-- How do you find the largest and smallest number in an unsorted integer array?
-- Given an array of size n with range of numbers from 1 to n+1. The array doesn’t contain any duplicate, one number is missing, find the missing number.
-- A sorted array is rotated at some unknown point, how to efficiently search an element in it.
-- How to find if two given rectangles overlap?
-- How to swap two integers without swapping the temporary variable in Java?
-- How do you check if a string contains only digits?
-- How to sort a list?
+- **How do you find the largest and smallest number in an unsorted integer array?**
+- **Given an array of size n with range of numbers from 1 to n+1. The array doesn’t contain any duplicate, one number is missing, find the missing number.**
+- **A sorted array is rotated at some unknown point, how to efficiently search an element in it.**
+- **How to find if two given rectangles overlap?**
+- **How to swap two integers without swapping the temporary variable in Java?**
+- **How do you check if a string contains only digits?**
+- **How to sort a list?**
