@@ -7,8 +7,8 @@
 #### This document is suitable for you if ...
 
 1. You want to **interview** with a new company.
-2. You are working in a company but want to know which questions are typically **mentioned** in interviews.
-3. You are an interviewer and need some **useful** questions or want to **challenge** the interviewee
+2. You are working in a company but want to **know** which questions are typically mentioned in interviews.
+3. You are an **interviewer** and need some useful questions or want to challenge the interviewee
 4. You just want to **improve** your knowledge about android problems and basics.
 
 
@@ -33,7 +33,7 @@
 7. [Gradle](https://github.com/javadhme/android-interview-questions#Gradle "Gradle")
 8. [Design patterns](https://github.com/javadhme/android-interview-questions# "Design patterns")
 9. [Data structure and algoritms](https://github.com/javadhme/android-interview-questions# "Data structure and algoritms")
-10. [Git](https://github.com/javadhme/android-interview-questions# "Git")
+
 
 ---
 <br>
@@ -62,6 +62,19 @@
 
 <br>
 
+- What is the difference between Abstraction and Encapsulation?
+
+  Even though both Abstraction and Encapsulation looks similar because both hide complexity and make the external interface simpler there is a subtle difference between them. Abstraction hides logical complexity while Encapsulation hides Physical Complexity.
+
+| Abstraction     | Encapsulation     |
+| :------------- | :------------- |
+| Abstraction solves the problems in the design level       | Encapsulation solves the problems in the implementation level       |
+| Abstraction is used for hiding the unwanted data and giving relevant data | Encapsulation means hiding the code and data into a single unit to protect the data from outside of the world |
+| Abstraction let you focus on what the object does instead of how it does it | Encapsulation means hiding the internal details mechanisms of how an objects does something |
+| Outer layout, used in terms of design: <br> Outer look of mobile phone, like it has display screen and keypad buttons to a number  | Inner layout, used in terms of implementation: <br> For example: Inner implementations detail of a mobile phone, how keypad button and display screen are connect with each other using circuits. |
+
+<br>
+
 ### 2. JAVA
 
 - How to prevent a class to be extended?
@@ -73,6 +86,10 @@
 - Multiple inheritances? Possible? How can we do that?
 - Object scopes?
 - Override private methods, possible?
+- why access to the non-static variable is not allowed from static method in Java?
+
+  because non-static variable are associated with a specific instance of an object while static is not associated with any instance.
+
 - What is a static variable in Java?
 - Java reference types?
 - What is Generic in Java?
@@ -89,8 +106,10 @@
 - What is the `volatile` modifier?
 - What is the `hashCode()` used for?
 - What are "annotations"?
+- When we use thread-safe , what does it mean?
+- what is the difference between `throw` and `throws`?
 
-
+  Keyword `throw` is used to explicitly throw as an exception in the body of function, while `throws` is utilized to handle checked exceptions for re-intimating the compiler that exceptions are being handled. The throws need to be used in the function’s signature and also while invoking the method that raises checked exceptions.
 
 <br>
 
@@ -151,6 +170,12 @@
   use `OnSaveInstanceState()` to store small amounts of UI data.
 
 - How to handle multiple screen sizes?
+- What is the difference between margin and padding? <br>
+   - **Padding** will be space added inside the container, for instance,
+    if it is a button, padding will be added inside the button.       
+
+  - **Margin** will be space added outside the container.
+
 - What is `sw` keyword in `layout-sw600` folder meaning?
 - What is the difference between `sw` and `w` and `h` as postfix in order to define the resources folder?
 - What are the major differences between `ListView` and `RecyclerView`?
@@ -203,6 +228,7 @@
     `replace` but they wont be invoked in case of `add`.
 
 - What is the difference between `dialog` and `dialogFragment`?
+
 - What is the difference between `Thread` and `AsyncTask`?
 
 - What is the relationship between the life cycle of an `AsyncTask` and an `Activity`? What problems can this result in? How can these problems be avoided? <br>
@@ -228,8 +254,14 @@
   generally a bad idea . Rather, for long-running background tasks, a different
   mechanism (such as a service) should be employed.
 
-- What is `lopper` and how it works?
-- What are Handlers?
+- What is `Lopper` and how it works?
+- What are Handlers? <br>
+    Handlers are objects for managing threads. It receives messages and writes
+    code on how to handle the message. They run outside of the activity’s
+    lifecycle, so they need to be cleaned up properly or else you will have
+    thread leaks. Handlers allow communicating between the background thread
+    and the main thread.
+
 - What is the difference between `Foreground` and `Background` and `Bounded` service?
   - __Foreground Service:__ A foreground `service` performs some operation that
   is noticeable to the user. For example, we can use a foreground service to
@@ -283,3 +315,199 @@
 - What are the benefits of `ART` in comparison to `Dalvik`?
 - What is `AAPT` ?
 - What is Doze mode?
+
+<br>
+
+
+### 8. Design patterns
+
+According to a report by [codespaghetti]("http://www.codespaghetti.com/java-design-pattern-interview-questions/"), The most design patterns that you must to know are **Singleton**, **Factory**, and **Builder**. I didn't bring the typical questions like what is a singleton, factory, and... . I imagine you fluent on these patterns and instead, I will focus on the other side of questions that may asked in the interview meeting.
+
+![Top 5 java design pattern interview questions](/assets/images/design-patterns-report.png)
+
+- When to use Adapter pattern? (Not for RecyclerView or ListView)
+
+  Use Adapter pattern when you need to make two class work with incompatible interfaces. Adapter pattern can also be used to encapsulate third party code so that your application only depends upon Adapter, which can adapt itself when third party code changes or you moved to a different third party library.
+
+- In singleton pattern whether it is better to make the whole `getInstance()` method synchronized or just critical section is enough? Which one is preferable?
+
+  Synchronization of whole `getInstance()` method is costly and is only needed during the initialization on singleton instance, to stop creating another instance of Singleton.  Therefore it is better to only synchronize critical section and not the whole method.
+
+- How many ways can you write singleton class in Java?
+
+  One can write singleton class in Java in five ways
+
+    - Classic Java Singleton pattern
+    ```java
+    Public class Singleton{
+
+        private static Singleton instance;
+
+        private Singleton(){          
+        }
+
+        public static Singleton getInstance(){
+          if(instance == null)
+            instance = new Singleton();
+          return instance;
+        }
+
+    }
+
+    ```
+    - A thread-safe singleton pattern in java using Synchronization
+    ```java
+    public class Singleton{
+
+        private static final Singleton instance = null;
+
+        private Singleton(){}
+
+        public synchronized static Singleton getInstance(){
+            if(instance == null)
+                instance = new Singleton();
+
+            return instance;
+        }
+    }
+    ```
+
+    - Double-checked locking with volatile keyword
+    ```java
+    public class Singleton {
+
+        private volatile static Singleton instance;
+
+        private Singleton (){}
+
+        public static Singleton getSingleton() {          
+          if (instance == null) {                                     
+            synchronized (Singleton.class) {              
+                if (instance == null)                    
+                    instance = new Singleton();                                    
+                }            
+          }          
+          return instance;        
+        }
+
+    }    
+    ```
+
+    - Initialization-on-demand with singleton holder
+    ```java
+    // Correct lazy initialization in Java
+    @ThreadSafe
+    class Singleton {
+
+        private Singleton() {}
+
+        private static class SingletonHolder {
+            public static Singleton instance = new Singleton();
+        }
+
+        public static Singleton getInstance() {
+            return SingletonHolder.instance;
+        }
+    }
+    ```
+
+    - Using Enum
+    ```java
+    enum Color {
+
+        RED(1), GREEN(2), YELLOW(3);
+
+        private int nCode ;
+
+        private Color( int _nCode) {
+          this.nCode = _nCode;
+        }
+
+        @Override
+        public String toString() {
+          return String.valueOf ( this . nCode );
+        }
+
+    }
+
+    public class ColorTest {
+        public static void main(String[] args) {
+            Color red = Color.RED;
+            Color red2 = Color.RED;
+
+            System.out.println(red == red2); // return true
+        }
+    }
+    ```
+
+- What are the drawbacks of using singleton design pattern?
+
+  - **Testability issue:** The bad thing with singletons is that the
+  `getInstance()` method is globally accessible. That means that you usually
+  call it from within a class, instead of depending on an interface you can
+  later mock. That's why it's impossible to replace it when you want to test
+  the method or the class.
+
+  - **Tight Coupling:** The singleton object is exposed globally and is
+  available to a whole application. Thus, classes using this object become
+  tightly coupled. So any change in the global object will impact all other
+  classes using it.
+
+  - **Violation issues:** Singleton principle can be violated by techniques such
+  as cloning. If an application is running on multiple JVM’s, then, in this case,
+  Singleton might be broken.
+
+- How can you prevent creating another instance of singleton using `clone()` method?
+
+  The preferred way to prevent creating another instance of a singleton is by not implementing Cloneable interface and if you do just throw an exception from `clone()` method "_not to create a clone of singleton class_".
+
+- When will you prefer to use a Factory Pattern?
+
+  The factory pattern is preferred in the following cases:
+    - A class does not know which class of objects it must create
+
+    - Factory pattern can be used where we need to create an object of any one of sub-classes depending on the data provided
+
+    - you can use factory pattern where you have to create an object of any one of sub-classes depending on the given data
+
+
+- Why use a factory class to instantiate a class when we can use new operator?
+
+  Factory classes provide flexibility in terms of design. Below are some of the
+  benefits of factory class:
+
+    - Factory design pattern results in more decoupled code as it allows us to
+      hide creational logic from dependent code
+    - It allows us to introduce an [Inversion of Control]("https://www.codeproject.com/Articles/592372/Dependency-Injection-DI-vs-Inversion-of-Control-IO" "What is IoC?") container
+    - It gives you a lot more flexibility when it comes time to change the
+      application as our creational logic is hidden from dependant code
+
+- What is the difference between factory and abstract factory design pattern?
+
+  Both factory and abstract factory are creational design patterns. The major
+  difference between these two is, a factory pattern creates an object through
+  inheritance and produces only one Product. On the other hand, an abstract
+  factory pattern creates the object through composition and produce families
+  of products. In other word an abstract factory is "factory of factories". You can find an example [___here___]("https://www.journaldev.com/1418/abstract-factory-design-pattern-in-java").
+
+- (My Favorite question!) Suppose we are building an application for a pizza
+store and we need to model their pizza classes. Assume they offer four types
+of pizzas namely Peppy Paneer, Farmhouse, Margherita and Chicken Fiesta. Each
+pizza has a different cost. We have overridden the getCost() in the subclasses
+to find the appropriate cost. Now let's become it more interesting! suppose a
+new requirement, in addition to a pizza, customer can also ask for several
+toppings such as Fresh Tomato, Paneer, Jalapeno, Capsicum, Barbeque, etc.
+Toppings may be redundant and it's OK. (It means a customer may choose double
+jalapeno or three-time barbeque). Each topping has its price and by adding
+each one the total cost of the pizza will be increased. If you have to suggest
+only one design pattern to solve this problem, choose which one? why? and
+How you implement it?  
+
+- If you couldn't find a solution to the previous question, don't worry and
+follow this one. It can help you to find out how to solve it. The question is,
+Which design pattern allows you to implement the inheritance approach at the
+runtime?
+
+- which pattern is used when we need to decouple an abstraction from its implementation?
+
+  When we want to decouple an abstraction from its implementation in order that two can vary independently we use **bridge pattern**.
