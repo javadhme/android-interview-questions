@@ -318,7 +318,6 @@
 
 <br>
 
-
 ### 8. Design patterns
 
 According to a report by [codespaghetti]("http://www.codespaghetti.com/java-design-pattern-interview-questions/"), The most design patterns that you must to know are **Singleton**, **Factory**, and **Builder**. I didn't bring the typical questions like what is a singleton, factory, and... . I imagine you fluent on these patterns and instead, I will focus on the other side of questions that may asked in the interview meeting.
@@ -511,3 +510,25 @@ runtime?
 - which pattern is used when we need to decouple an abstraction from its implementation?
 
   When we want to decouple an abstraction from its implementation in order that two can vary independently we use **bridge pattern**.
+
+
+
+<br>
+
+### 9. Data structure and algoritms
+
+_NOTICE: For D.S. questions will not add any response!_ :(
+
+- What are the differences between Array and linkedList?
+- What are the differences between Array and ArrayList?
+
+- Find duplicate an item in a non-sorted list?
+- How to implement a stack using queue?
+
+- How do you find the largest and smallest number in an unsorted integer array?
+- Given an array of size n with range of numbers from 1 to n+1. The array doesn’t contain any duplicate, one number is missing, find the missing number.
+- A sorted array is rotated at some unknown point, how to efficiently search an element in it.
+- How to find if two given rectangles overlap?
+- How to swap two integers without swapping the temporary variable in Java?
+- How do you check if a string contains only digits?
+- How to sort a list?
