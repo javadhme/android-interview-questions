@@ -319,7 +319,6 @@
 <br>
 
 
-
 ### 7. Gradle
 
 - What is buildType?
@@ -381,6 +380,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
     ```
 <br>
     - A thread-safe singleton pattern in java using Synchronization
+
     ```java
     public class Singleton{
 
@@ -398,6 +398,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
     ```
 <br>
     - Double-checked locking with volatile keyword
+
     ```java
     public class Singleton {
 
@@ -419,6 +420,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
     ```
 <br>
     - Initialization-on-demand with singleton holder
+
     ```java
     // Correct lazy initialization in Java
     @ThreadSafe
@@ -437,6 +439,7 @@ According to a report by [codespaghetti]("http://www.codespaghetti.com/java-desi
     ```
 <br>
     - Using Enum
+
     ```java
     enum Color {
 
