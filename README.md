@@ -154,7 +154,7 @@
     }
   }
   ```
-   
+
   Output:
   ```
   subclass1
