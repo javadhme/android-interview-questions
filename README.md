@@ -154,8 +154,9 @@
     }
 }
   ```
-  OUTPUT:
-  ```
+   
+  Output:
+  ```java
   subclass1
   subclass2
   ```
