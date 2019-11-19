@@ -71,24 +71,24 @@
   Even though both Abstraction and Encapsulation looks similar because both hide complexity and make the external interface simpler there is a subtle difference between them. Abstraction hides logical complexity while Encapsulation hides Physical Complexity.
 
   | Abstraction     | Encapsulation     |
-| :------------- | :------------- |
-| Abstraction solves the problems in the design level       | Encapsulation solves the problems in the implementation level       |
-| Abstraction is used for hiding the unwanted data and giving relevant data | Encapsulation means hiding the code and data into a single unit to protect the data from outside of the world |
-| Abstraction let you focus on what the object does instead of how it does it | Encapsulation means hiding the internal details mechanisms of how an objects does something |
-| Outer layout, used in terms of design: <br> Outer look of mobile phone, like it has display screen and keypad buttons to a number  | Inner layout, used in terms of implementation: <br> For example: Inner implementations detail of a mobile phone, how keypad button and display screen are connect with each other using circuits. |
+  | :------------- | :------------- |
+  | Abstraction solves the problems in the design level       | Encapsulation solves the problems in the implementation level       |
+  | Abstraction is used for hiding the unwanted data and giving relevant data | Encapsulation means hiding the code and data into a single unit to protect the data from outside of the world |
+  | Abstraction let you focus on what the object does instead of how it does it | Encapsulation means hiding the internal details mechanisms of how an objects does something |
+  | Outer layout, used in terms of design: <br> Outer look of mobile phone, like it has display screen and keypad buttons to a number  | Inner layout, used in terms of implementation: <br> For example: Inner implementations detail of a mobile phone, how keypad button and display screen are connect with each other using circuits. |
 
 <br>
 
 - **Difference between abstract and interface?**
 
   | Interface     | Abstract class     |
-| :------------- | :------------- |
-| Support multiple inheritances | Does not support multiple inheritances |
-| Can extends another interfaces only | Can extends another class and implement multiple interfaces |
-| Does not contain data member | Contains data member |
-| Does not contains constructors | contains constructors  |
-| In Java Contains only incomplete member (signature of member) | Contains both signature (abstract) of method and member functions |
-| Cannot have access modifiers by default and everything is assumed as public | Can has access modifiers for subs, methods and fields |
+  | :------------- | :------------- |
+  | Support multiple inheritances | Does not support multiple inheritances |
+  | Can extends another interfaces only | Can extends another class and implement multiple interfaces |
+  | Does not contain data member | Contains data member |
+  | Does not contains constructors | contains constructors  |
+  | In Java Contains only incomplete member (signature of member) | Contains both signature (abstract) of method and member functions |
+  | Cannot have access modifiers by default and everything is assumed as public | Can has access modifiers for subs, methods and fields |
 
 
 - **What is Polymorphism?**
@@ -171,13 +171,13 @@
 - **What is the difference between overriding and overloading?**
 
   | Method Overloading      | Method Overriding     |
-| :-------------   | :------------- |
-| Method overloading is a compile time polymorphism.         | Method overriding is a run time polymorphism.       |
-| It help to rise the readability of the program. | While it is used to grant the specific implementation of the method which is already provided by its parent class or super class. |
-| It is occur within the class.	 | 	While it is performed in two classes with inheritance relationship. |
-| Method overloading may or may not require inheritance. | While method overriding always needs inheritance. |
-| In this, methods must have same name and different signature. | While in this, methods must have same name and same signature. |
-| In method overloading, return type can or can not be be same, but we must have to change the parameter. | While in this, return type must be same or co-variant. |
+  | :-------------   | :------------- |
+  | Method overloading is a compile time polymorphism.         | Method overriding is a run time polymorphism.       |
+  | It help to rise the readability of the program. | While it is used to grant the specific implementation of the method which is already provided by its parent class or super class. |
+  | It is occur within the class.	 | 	While it is performed in two classes with inheritance relationship. |
+  | Method overloading may or may not require inheritance. | While method overriding always needs inheritance. |
+  | In this, methods must have same name and different signature. | While in this, methods must have same name and same signature. |
+  | In method overloading, return type can or can not be be same, but we must have to change the parameter. | While in this, return type must be same or co-variant. |
 
 <br>
 
