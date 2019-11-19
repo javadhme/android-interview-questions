@@ -40,19 +40,137 @@
 
 ### 1. Object-Oriented
 
-- **What is and Object?**
+- **What is an Object?**
+
+  An object is an instance of a class that has states and behaviors. A Class
+  can be defined as a template that describes the behavior/state that the object
+  of its type support.
+
+<br>
+
 - **What is the main feature of OOP ?**
 
     `Encapsulation`, `Polymorphism`, `Inheritance`, `Abstraction`
 
+<br>
+
 - **What is encapsulation?**
-- **What is Polymorphism?**
+
+  Encapsulation is one of the four fundamental OOP concepts. It is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class. Therefore, it is also known as *data hiding*. To achieve encapsulation in Java:
+    - Declare the variables of a class as private.
+    - Provide public setter and getter methods to modify and view the variables values.
+
+  Benefits of Encapsulation:
+    - The fields of a class can be made read-only or write-only.
+    - A class can have total control over what is stored in its fields.
+
+<br>
+
+- **What is the difference between Abstraction and Encapsulation?**
+
+  Even though both Abstraction and Encapsulation looks similar because both hide complexity and make the external interface simpler there is a subtle difference between them. Abstraction hides logical complexity while Encapsulation hides Physical Complexity.
+
+  | Abstraction     | Encapsulation     |
+| :------------- | :------------- |
+| Abstraction solves the problems in the design level       | Encapsulation solves the problems in the implementation level       |
+| Abstraction is used for hiding the unwanted data and giving relevant data | Encapsulation means hiding the code and data into a single unit to protect the data from outside of the world |
+| Abstraction let you focus on what the object does instead of how it does it | Encapsulation means hiding the internal details mechanisms of how an objects does something |
+| Outer layout, used in terms of design: <br> Outer look of mobile phone, like it has display screen and keypad buttons to a number  | Inner layout, used in terms of implementation: <br> For example: Inner implementations detail of a mobile phone, how keypad button and display screen are connect with each other using circuits. |
+
+<br>
+
 - **Difference between abstract and interface?**
+
+  | Interface     | Abstract class     |
+| :------------- | :------------- |
+| Support multiple inheritances | Does not support multiple inheritances |
+| Can extends another interfaces only | Can extends another class and implement multiple interfaces |
+| Does not contain data member | Contains data member |
+| Does not contains constructors | contains constructors  |
+| In Java Contains only incomplete member (signature of member) | Contains both signature (abstract) of method and member functions |
+| Cannot have access modifiers by default and everything is assumed as public | Can has access modifiers for subs, methods and fields |
+
+
+- **What is Polymorphism?**
+
+  The word polymorphism means having many forms. In simple words, we can define polymorphism as the ability of a message to be displayed in more than one form. In Java polymorphism is mainly divided into two types: compile-time and runtime polymorphism.
+
 - **What is the difference between static and dynamic Polymorphism?**
+
+  *method overloading* represents a *static* form of polymorphism. method overloading means using two or more functions with same name but with the different parameters. Static polymorphism is resolved on compile-time and that is why it's called static. An example of this would be as follow:
+
+  ```java
+    class StaticPolymorphismTest {
+
+      public int multiply(int a, int b) {
+        return a * b;
+      }
+
+      public double multiply(double a, double b) {
+        return a * b;
+      }
+
+    }
+  ```
+
+  *method overriding* represents a *dynamic* form of polymorphism. It is a process in which a function call to the overridden method is resolved at Runtime. It is also known as *Dynamic Method Dispatch*. dynamic polymorphism is resolved at runtime. An example of this would be as follow:
+
+  ```java
+  class Parent {
+
+    void Print()
+    {
+        System.out.println("parent class");
+    }
+  }
+
+  class subclass1 extends Parent {
+
+    void Print()
+    {
+        System.out.println("subclass1");
+    }
+  }
+
+  class subclass2 extends Parent {
+
+    void Print()
+    {
+        System.out.println("subclass2");
+    }
+  }
+
+  class TestPolymorphism3 {
+
+    public static void main(String[] args){
+
+        Parent a;
+
+        a = new subclass1();
+        a.Print();
+
+        a = new subclass2();
+        a.Print();
+    }
+}
+  ```
+  OUTPUT:
+  ```
+  subclass1
+  subclass2
+  ```
+
 - **Can Interfaces to be extended?**
+
+  Yes, an interface can extend other interfaces. it supports multiple
+  inheritances, which means it can extend more than one interface. But every
+  class which wants to use an interface must add it by keyword `implements`
+  and using the keyword `extends` for interfaces in classes is illegal and
+  cause compile error.
+
 - **What is the difference between overriding and overloading?**
 
-| Method Overloading      | Method Overriding     |
+  | Method Overloading      | Method Overriding     |
 | :-------------   | :------------- |
 | Method overloading is a compile time polymorphism.         | Method overriding is a run time polymorphism.       |
 | It help to rise the readability of the program. | While it is used to grant the specific implementation of the method which is already provided by its parent class or super class. |
@@ -63,16 +181,7 @@
 
 <br>
 
-- **What is the difference between Abstraction and Encapsulation?**
 
-  Even though both Abstraction and Encapsulation looks similar because both hide complexity and make the external interface simpler there is a subtle difference between them. Abstraction hides logical complexity while Encapsulation hides Physical Complexity.
-
-| Abstraction     | Encapsulation     |
-| :------------- | :------------- |
-| Abstraction solves the problems in the design level       | Encapsulation solves the problems in the implementation level       |
-| Abstraction is used for hiding the unwanted data and giving relevant data | Encapsulation means hiding the code and data into a single unit to protect the data from outside of the world |
-| Abstraction let you focus on what the object does instead of how it does it | Encapsulation means hiding the internal details mechanisms of how an objects does something |
-| Outer layout, used in terms of design: <br> Outer look of mobile phone, like it has display screen and keypad buttons to a number  | Inner layout, used in terms of implementation: <br> For example: Inner implementations detail of a mobile phone, how keypad button and display screen are connect with each other using circuits. |
 
 <br>
 
