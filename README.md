@@ -152,9 +152,10 @@
         a = new subclass2();
         a.Print();
     }
-}
+  }
   ```
-  OUTPUT:
+   
+  Output:
   ```
   subclass1
   subclass2
