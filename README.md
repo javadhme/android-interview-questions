@@ -24,15 +24,15 @@
 ---
 #### Table of contents
 
-1. [Object-oriented](https://github.com/javadhme/android-interview-questions#Lifestyle "Object-oriented")
-2. [Java](https://github.com/javadhme/android-interview-questions#Lifestyle "Java")
-3. [Kotlin](https://github.com/javadhme/android-interview-questions#Lifestyle "Kotlin")
-4. [Android](https://github.com/javadhme/android-interview-questions#Android "Android")
-5. [Architecture and coding](https://github.com/javadhme/android-interview-questions#"Android "Architecture and coding")
-6. [Tools and libraries](https://github.com/javadhme/android-interview-questions#"Android "Tools and libraries")
-7. [Gradle](https://github.com/javadhme/android-interview-questions#Gradle "Gradle")
-8. [Design patterns](https://github.com/javadhme/android-interview-questions# "Design patterns")
-9. [Data structure and algoritms](https://github.com/javadhme/android-interview-questions# "Data structure and algoritms")
+1. [Object-oriented](https://github.com/javadhme/android-interview-questions#1-object-oriented "Object-oriented")
+2. [Java](https://github.com/javadhme/android-interview-questions#2-java "Java")
+3. [Kotlin](https://github.com/javadhme/android-interview-questions#3-kotlin "Kotlin")
+4. [Android](https://github.com/javadhme/android-interview-questions#4-android "Android")
+5. [Architecture and coding](https://github.com/javadhme/android-interview-questions#5-architecture-and-coding "Architecture and coding")
+6. [Tools and libraries](https://github.com/javadhme/android-interview-questions#6-tools-and-libraries "Tools and libraries")
+7. [Gradle](https://github.com/javadhme/android-interview-questions#7-gradle "Gradle")
+8. [Design patterns](https://github.com/javadhme/android-interview-questions#8-design-patterns "Design patterns")
+9. [Data structure and algoritms](https://github.com/javadhme/android-interview-questions#9-data-structure-and-algoritms "Data structure and algoritms")
 
 
 ---
