@@ -66,18 +66,6 @@
 
 <br>
 
-- **What is the difference between Abstraction and Encapsulation?**
-
-  Even though both Abstraction and Encapsulation looks similar because both hide complexity and make the external interface simpler there is a subtle difference between them. Abstraction hides logical complexity while Encapsulation hides Physical Complexity.
-
-  | Abstraction     | Encapsulation     |
-  | :------------- | :------------- |
-  | Abstraction solves the problems in the design level       | Encapsulation solves the problems in the implementation level       |
-  | Abstraction is used for hiding the unwanted data and giving relevant data | Encapsulation means hiding the code and data into a single unit to protect the data from outside of the world |
-  | Abstraction let you focus on what the object does instead of how it does it | Encapsulation means hiding the internal details mechanisms of how an objects does something |
-  | Outer layout, used in terms of design: <br> Outer look of mobile phone, like it has display screen and keypad buttons to a number  | Inner layout, used in terms of implementation: <br> For example: Inner implementations detail of a mobile phone, how keypad button and display screen are connect with each other using circuits. |
-
-<br>
 
 - **Difference between abstract and interface?**
 
@@ -517,13 +505,38 @@
 
 - **What is `Application` class?**
 
+  The `Application` class in Android is the base class within an Android app that contains all other components such as activities and services. The Application class, or any subclass of the Application class, is instantiated before any other class when the process for your application/package is created.
+
 - **Difference between `Activity` and `Service`?**
+
+  - **Activity:** An activity is the entry point for interacting with the user. It represents a single screen with a user interface.
+
+  - **Service:** A service is a general-purpose entry point for keeping an app running in the background for all kinds of reasons. It is a component that runs in the background to perform long-running operations or to perform work for remote processes. A service does not provide a user interface.
+
 - **Why do android apps need to ask permission like `INTERNET` or `LOCATION`?**
-- **Differences between `serializable` and `Parcalable`?**
+
+  The Android platform takes advantage of the Linux user-based protection to identify and isolate app resources called sandbox. This isolates apps from each other and protects apps and the system from malicious apps. If an app needs to use some system resources (like internet, or location sensor,..) or needs to connect other apps (like IAB library), it should request this access. Then android OS give this request and get permission to access the resource. If you want to use system resources, request the permission under the `<uses-permission>` tag in the `android-manifest.xml` file.
+
+- **Differences between `serializable` and `Parcelable`?**
+
+  Serializable is a standard java interface but not a part of the Android SDK. Just by implementating this interface your POJO will be ready to jump from one activity to another. So what's the problem with Serializable? Serializable use reflection during the process and lots of additional temp objects created along the way and it may cause garbage collection to occue more often. That is why the serializable is more than 10x slower than Parcelable.
+
 - **Why `serializable` body is empty? How is it doing?**
+
+  Yes, It's empty because the Java reflection API is performed for marshaling operations (by JVM). This helps identify the Java object's member and behavior but also ends up creating a lot of garbage objects.
+
 - **Which method in `fragment` runs only once?**
+
+  According to the [documentation](https://developer.android.com/guide/components/fragments#Creating), the `onCreate()` method is called once a fragment is created. Within your implementation, you should initialize essential components of the fragment that you want to retain when the fragment is paused or stopped, then resumed.
+
 - **How does the activity respond when orientation is changed?**
+
+  According to the [documentation](https://developer.android.com/guide/topics/resources/runtime-changes), Some device configurations can change during runtime (such as screen orientation, keyboard availability, and when the user enables multi-window mode). When such a change occurs, Android restarts the running `Activity` ( `onDestroy()` is called, followed by `onCreate()`). The restart behavior is designed to help your application adapt to new configurations by automatically reloading your application with alternative resources that match the new device configuration.
+
 - **How to know `configChange` happens in `onDestroy()` function?**
+
+  Once an activity is in the process of finishing then `isFinishing()` method is returned `true` value, otherwise `false` when the system is temporarily destroying the instance of the activity.
+
 - **How to prevent the data from reloading when orientation is changed?**
 
   The most basic approach would be to use a combination of `ViewModels` and `onSaveInstanceState()`. A `ViewModel` is LifeCycle-Aware. In other words,
@@ -536,6 +549,15 @@
   use `OnSaveInstanceState()` to store small amounts of UI data.
 
 - **How to handle multiple screen sizes?**
+
+  It's a long debate but in a very nutshell, you can do it in these ways:
+    - Use flexible layout like `ConstraintLayout` unless create alternative layout in different layout folders. (e.g. layout-sw480, layout-sw600, layout-sw720 ...)    
+    - Provide different bitmap drawables for different screen densities or use vector assets.
+    - Be aware of the screen orientation change approach in your application.
+      If you don't want to handle it enforce to use just one orientation (portrait or landscape) through declaring it in the manifest file.
+
+ for complete reading, see the [official documentation](https://developer.android.com/training/multiscreen/screensizes).
+
 - **What is the difference between margin and padding?**
 
    - **Padding** will be space added inside the container, for instance,
@@ -544,8 +566,29 @@
   - **Margin** will be space added outside the container.
 
 - **What is `sw` keyword in `layout-sw600` folder meaning?**
+
+  The `sw` keywrod which stands on "smallest width" is an screen size qualifier that allow you to provide alternative layouts for screens that have a minimum width measured in dp.
+  The smallest width qualifier specifies the smallest of the screen's two sides, regardless of the device's current orientation, so it's a simple way to specify the overall screen size available for your layout. Here is some useful values:
+
+    - **320dp:** a typical phone screen (240x320 ldpi, 320x480 mdpi, 480x800 hdpi, etc).
+    - **480dp:** a large phone screen ~5" (480x800 mdpi).
+    - **600dp:** a 7” tablet (600x1024 mdpi).
+    - **720dp:** a 10” tablet (720x1280 mdpi, 800x1280 mdpi, etc).
+
+  Figure below provides a more detailed view of how different screen dp widths generally correspond to different screen sizes and orientations.
+
+  ![](/assets/images/layout-adaptive-breakpoints_2x.png)
+
 - **What is the difference between `sw` and `w` and `h` as postfix in order to define the resources folder?**
+
+    - `sw`: The smallest width qualifier specifies the smallest of the screen's two sides, regardless of the device's current orientation,
+    - `w`: The width qualifier specifies the available width. For example, if you have a two-pane layout, you might want to use that whenever the screen provides at least 600dp of width, which might change depending on whether the device is in landscape or portrait orientation. Notice that this qualifier is orientation related.
+    - `h`: The height qualifier specifies the available height. This is equivalent to `w` qualifier but is used when the available height is a concern.
+
+  The major difference between these qualifiers is responding to orientation change. The `sw` isn't orientation sensitive but the two others are orientation sensitive. It means that if the screen is 480*800 in dp, then in `sw` always `layout-sw480` folder is loaded but in `w`, for portrait mode, `layout-w480`, and landscape mode, `layout-w800` folder is loaded.
+
 - **What are the major differences between `ListView` and `RecyclerView`?**
+
   - **ViewHolder Pattern**: `Recyclerview` implements the ViewHolders pattern
     whereas it is not mandatory in a ListView. A `ViewHolder` object stores
     each of the component views inside the tag field of the Layout, so you can
@@ -577,9 +620,18 @@
    `Intent` in turn using a worker thread, and stops itself when it runs out of
    work. [Read More on Mindorks's blog]("https://blog.mindorks.com/service-vs-intentservice-in-android")
 
-- **How to pass items to `fragment`?**
 - **What is `Fragment`?**
+
+  A `Fragment` is a piece of an activity which enable more modular activity design. A fragment has its layout, its behavior, and its life cycle callbacks. You can add or remove fragments in an activity while the activity is running. You can combine multiple fragments in a single activity to build a multi-pane UI. A fragment can also be used in multiple activities. The fragment life cycle is closely related to its host activity which means when the activity is paused, all the fragments available in the activity will also be stopped.
+
+- **How to pass items to `fragment`?**
+
+  Using `Bundle` you can pass items to the fragment.
+
 - **How would you communicate between two `fragments`?**
+
+  There are several ways to communicate two fragments. Using `interfaces` are a common way to do that. You can connect two fragments through interfaces that are implemented in the parent activity.
+
 - **Difference between adding/replacing `fragment` in `backstack`?**
   - `replace` removes the existing `fragment` and adds a new `fragment`.
     This means when you press back button the fragment that got replaced will
@@ -595,6 +647,10 @@
     `replace` but they wont be invoked in case of `add`.
 
 - **What is the difference between `dialog` and `dialogFragment`?**
+
+  THe `dialog` is a small window that prompts the user to make a decision or enter additional information. Instead, `dialogFragment` is a fragment that displays a dialog windows and contains a dialog object.
+
+  DialogFragment does various things to keep the fragment's lifecycle driving it, instead of the Dialog. Dialogs are generally autonomous entities -- they are their own window, receiving their own input events, and often deciding on their own when to disappear. DialogFragment needs to ensure that what is happening with the Fragment and Dialog states remains consistent. To do this, it watches for dismiss events from the dialog and takes care of removing its own state when they happen.
 
 - **What is the difference between `Thread` and `AsyncTask`?**
 
